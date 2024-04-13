@@ -21,16 +21,16 @@ export const CountriesDisplay = ({ filteredCountries }) => {
             <button onClick={() => modalHandler(country.name.common)}>
               More
             </button>
-            {isModalOpen && (
-              <CountryModal
-                setIsModalOpen={setIsModalOpen}
-                selectedCountryName={selectedCountryName}
-                filteredCountries={filteredCountries}
-              />
-            )}
           </div>
         );
       })}
+      {isModalOpen && (
+        <CountryModal
+          setIsModalOpen={setIsModalOpen}
+          selectedCountryName={selectedCountryName}
+          filteredCountries={filteredCountries}
+        />
+      )}
     </div>
   );
 };
